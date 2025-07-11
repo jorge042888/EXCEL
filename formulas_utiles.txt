@@ -1,16 +1,10 @@
 =LET(programa1;
-  SI(LARGO(S4)=5;
-  S4;EXTRAE(S4;1;5));
-  programa2;
-  SI(LARGO(S4)>5;
-  EXTRAE(S4;6;5);"");
-  busqueda1;SI(LARGO(S4)=5;
-  BUSCARV(
-    programa1;APILARV('[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$O$3:$Q$40;
-                      '[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$S$3:$T$22;
-                      '[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$S$27:$T$28;
-                      '[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$W$3:$X$14);2;0);
-                       BUSCARV(programa2;APILARV('[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$O$3:$Q$40;
-                      '[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$S$3:$T$22;
-                      '[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$S$27:$T$28;
-                      '[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$W$3:$X$14);2;0));busqueda1)
+SI(LARGO(S4)=5;S4;
+EXTRAE(S4;1;5));
+programa2;SI(LARGO(S4)>5;EXTRAE(S4;7;5);"");
+busqueda1;
+SI(LARGO(S4)=5;
+BUSCARV(programa1;APILARV('[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$O$3:$Q$40;'[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$S$3:$T$22;'[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$S$27:$T$28;'[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$W$3:$X$14);2;0);
+BUSCARV(programa2;APILARV('[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$O$3:$Q$40;'[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$S$3:$T$22;'[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$S$27:$T$28;'[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$W$3:$X$14);2;0));
+busqueda2;
+BUSCARV(programa2;APILARV('[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$O$3:$Q$40;'[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$S$3:$T$22;'[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$S$27:$T$28;'[Códigos de la cuenta corriente TSADETC (5).xlsx]carreras por cohorte RES 1577'!$W$3:$X$14);2;0);resultado;SI(LARGO(S4)=5;busqueda1;O(busqueda1;CONCAT(busqueda1;"-";busqueda2)));resultado)
